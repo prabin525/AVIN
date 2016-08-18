@@ -6,12 +6,28 @@
 
 %the default parametes
     input_layer_size = 400; %20*20 imput image results 400 pixels in total. 
-    hidden_layer_size = 25; %25 hidden units
-    num_labels = 16;        % from 0-9, BAA, NA,ba,pa, cha, ja
-   
+    hidden_layer_size = 400; %25 hidden units
+    num_labels = 17;            %1 -> 1 (5)
+                                %2 -> 2 (5)
+                                %3 -> 3 (5)
+                                %4 -> 4 (5)
+                                %5 -> 5 (5)
+                                %6 -> 6 (5)
+                                %7 -> 7 (5)
+                                %8 -> 8 (5)
+                                %9 -> 9 (5)
+                                %0 -> 10 (5)
+                                %?? -> 11 (5)
+                                %?? -> 12 (4)
+                                %? -> 13 (1)
+                                %?? -> 14 (5)
+                                %?? -> 15 (5)
+                                %?? -> 16 (2)
+                                %dot -> 17 (1)
+
 %to load the data
     
-    %load('train.mat')
+    load('trainset.mat')
     m = size(X,1);
 
 %Random initialization of the weights or theta
