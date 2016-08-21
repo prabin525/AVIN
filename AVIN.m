@@ -55,7 +55,7 @@ function AVIN_OpeningFcn(hObject, eventdata, handles, varargin)
 % Choose default command line output for AVIN
 handles.output = hObject;
 
-g = imread('Assets/initialIcon.png');
+g = imread('Assets/initialIcon.jpg');
 imshow(g)
 learning
 assignin('base','Theta1',Theta1);
