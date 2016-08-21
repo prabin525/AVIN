@@ -22,7 +22,7 @@ function varargout = AVIN(varargin)
 
 % Edit the above text to modify the response to help AVIN
 
-% Last Modified by GUIDE v2.5 18-Aug-2016 19:05:49
+% Last Modified by GUIDE v2.5 21-Aug-2016 07:32:05
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -113,6 +113,7 @@ assignin('base','outputMatrix',outputMatrix);
 finalString = stringGenerator(outputMatrix);
 assignin('base','finalString',finalString);
 set(handles.outputText, 'String', finalString);
+set(handles.editResult,'String', finalString);
 
 
 
@@ -121,3 +122,26 @@ function Untitled_1_Callback(hObject, eventdata, handles)
 % hObject    handle to Untitled_1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+
+function editResult_Callback(hObject, eventdata, handles)
+% hObject    handle to editResult (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editResult as text
+%        str2double(get(hObject,'String')) returns contents of editResult as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function editResult_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editResult (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
